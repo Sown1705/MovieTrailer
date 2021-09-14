@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="video" type="com.vincenzocassown.moviestrailer.model.video.ResultVideo"/>
+    </data>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/itemVideo">
+        <ImageView android:layout_width="128dp" android:layout_height="124dp"
+                   android:src="@drawable/icon_ytb" android:id="@+id/img_icon"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:layout_marginTop="8dp"
+                  android:id="@+id/tvName"
+                  android:text="@{video.name}"
+                  android:layout_marginBottom="8dp"
+                  android:textStyle="bold"
+                  android:textSize="18sp"
+                  android:layout_toEndOf="@+id/img_icon"/>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_toEndOf="@+id/img_icon" android:layout_below="@+id/tvName">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:text="Published at :"
+                          android:textSize="15sp"
+                          android:layout_marginBottom="8dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:text="Type :"
+                          android:textSize="15sp"
+                          android:layout_marginBottom="15dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:text="Language :"
+                          android:textSize="15sp"
+                          android:textStyle="italic"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:id="@+id/tvPublished_at"
+                          android:text="@{video.publishedAt}"
+                          android:textSize="15sp"
+                          android:layout_marginBottom="8dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:id="@+id/tvType"
+                          android:text="@{video.type}"
+                          android:layout_marginBottom="15dp"
+                          android:textSize="15sp"/>
+               <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:id="@+id/tvLanguage"
+                          android:text="@{video.iso31661}"
+                          android:textSize="15sp"
+                          android:textStyle="italic"
+                          android:layout_marginBottom="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
+

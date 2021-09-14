@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="popular">Popular</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="up_coming">Up Coming</string>
+    <string name="now_playing">Now Playing</string>
+    <!--  TODO: Remove or change this placeholder text  -->
+    <string name="app_name">Movies Trailer</string>
+</resources>
